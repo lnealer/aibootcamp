@@ -1,6 +1,5 @@
 package com.example.helloworld;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -9,7 +8,6 @@ public class DataInitializer implements CommandLineRunner {
 
     private final PersonRepository personRepository;
 
-    @Autowired
     public DataInitializer(PersonRepository personRepository) {
         this.personRepository = personRepository;
     }
