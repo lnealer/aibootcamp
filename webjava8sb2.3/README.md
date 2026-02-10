@@ -1,10 +1,10 @@
 # Hello World Spring Boot Application
 
-A simple Hello World web application built with Java 8 and Spring Boot 2.3.12.
+A simple Hello World web application built with Java 17 and Spring Boot 3.2.
 
 ## Prerequisites
 
-- Java 8 (JDK 1.8)
+- Java 17 (JDK 17 or higher)
 - Maven 3.x
 
 ## Build and Run
@@ -105,8 +105,8 @@ The application initializes with the following sample data:
 
 ## Technologies Used
 
-- Java 8
-- Spring Boot 2.3.12.RELEASE
+- Java 17
+- Spring Boot 3.2
 - Spring Web
 - Spring Data JPA
 - H2 Database (embedded)
