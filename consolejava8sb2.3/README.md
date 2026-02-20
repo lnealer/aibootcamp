@@ -1,9 +1,9 @@
 # Hello World Console Application
 
-A simple Spring Boot console application using Java 8 and Spring Boot 2.3.12.RELEASE.
+A simple Spring Boot console application using Java 17 and Spring Boot 3.2.
 
 ## Requirements
-- Java 8 or higher
+- Java 17 or higher
 - Maven 3.x
 
 ## Build the application
@@ -24,5 +24,5 @@ java -jar target/hello-world-console-1.0.0.jar
 ## Expected Output
 ```
 Hello World!
-This is a Spring Boot console application running on Java 8
+This is a Spring Boot console application running on Java 17
 ```
