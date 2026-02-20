@@ -14,6 +14,6 @@ public class HelloWorldApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         System.out.println("Hello World!");
-        System.out.println("This is a Spring Boot console application running on Java 8");
+        System.out.println("This is a Spring Boot console application running on Java 17");
     }
 }
