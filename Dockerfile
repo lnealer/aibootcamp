@@ -1,6 +1,4 @@
 ARG FUNCTION_DIR="/upgrade_function"
-# add java
-
 
 FROM amazonlinux:2
 RUN  yum -y update && \
@@ -16,13 +14,10 @@ COPY requirements.txt .
 
 COPY . ${FUNCTION_DIR}
 
-
 RUN pip install --target ${FUNCTION_DIR} awslambdaric
-
 
 # Install the specified packages
 RUN pip install -r requirements.txt --target ${FUNCTION_DIR} 
-
 
 # install maven
 ARG MAVEN_VERSION=3.9.12
@@ -38,7 +33,6 @@ FROM python:3.12-slim
 
 COPY --from=amazoncorretto:17 /usr/lib/jvm/java-17-amazon-corretto /usr/lib/jvm/java-17-amazon-corretto
 
-
 # Set Java and Maven environment variables
 ENV JAVA_HOME=/usr/lib/jvm/java-17-amazon-corretto
 ENV MAVEN_HOME=/opt/maven
@@ -48,12 +42,7 @@ ARG FUNCTION_DIR
 # Set working directory to function root directory
 WORKDIR ${FUNCTION_DIR}
 
-
 COPY --from=build-image ${FUNCTION_DIR} ${FUNCTION_DIR}
-
-
-# docker buildx build --platform linux/amd64 --build-arg PLATFORM=linux/amd64 -t python-java-lambda .
-# ENTRYPOINT [ "/usr/local/bin/python", "-m", "awslambdaric" ]
 CMD ["lambda_handler.lambda_handler"]
 
 
